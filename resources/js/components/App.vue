@@ -1,0 +1,10 @@
+<template>
+    <main>
+        <header>
+            <h1>
+                Opgrid
+            </h1>
+        </header>
+        <router-view></router-view>
+    </main>
+</template>

@@ -24,9 +24,7 @@
             </div>
         @endif --}}
 
-        <div id="app">
-            <example-component></example-component>
-        </div>
+        <div id="app"></div>
 
         <script src="{{ mix('js/app.js') }}"></script>
     </body>

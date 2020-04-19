@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import './bootstrap'
-import './routes'
+import router from './router'
+import App from './components/App'
 
 window.Vue = Vue;
 
@@ -12,7 +13,7 @@ window.Vue = Vue;
  * Eg. ./components/ExampleComponent.vue -> <example-component></example-component>
  */
 
-const files = require.context('./', true, /\.vue$/i)
+const files = require.context('./components', true, /\.vue$/i)
 files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
@@ -24,5 +25,9 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
  */
 
 const app = new Vue({
+    router,
     el: '#app',
+    render(h) {
+        return h(App)
+    }
 });
