@@ -15,7 +15,14 @@ const path = require('path')
 
 mix.js('resources/js/app.js', 'public/js')
    .postCss('resources/css/app.css', 'public/css', [
-       require('postcss-import'),
+    //    require('postcss-import'),
        require('autoprefixer'),
        tailwind(path.resolve(__dirname, './tailwind.config.js'))
    ]);
+
+mix.webpackConfig({
+    devServer: {
+        disableHostCheck: true
+    }
+})
+

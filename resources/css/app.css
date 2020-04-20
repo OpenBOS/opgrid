@@ -1,5 +1,11 @@
+@import "~@fortawesome/fontawesome-pro/css/all.css";
+
 @import "tailwindcss/base";
 /* @import "./custom-base-styles.css"; */
+
+* {
+    color: theme('colors.white');
+}
 
 @import "tailwindcss/components";
 /* @import "./custom-components.css"; */
