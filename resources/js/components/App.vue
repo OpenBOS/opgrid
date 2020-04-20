@@ -5,7 +5,7 @@
                 Codename: OpGrid
             </h1>
             <div class="mx-8 bg-white flex items-center py-2 px-2 rounded-lg flex-auto">
-                <i class="fal fa-search text-red-900"></i>
+                <i class="fas fa-search text-red-900"></i>
                 <input type="text" placeholder="Suchen" class="bg-transparent ml-2 placeholder-red-900 flex-auto">
             </div>
         </div> -->
@@ -21,7 +21,7 @@
 
             <div class="p-4">
                 <div class="bg-gray-800 flex items-center py-2 px-2 rounded-lg">
-                    <i class="fal fa-search text-gray-400"></i>
+                    <i class="fas fa-search text-gray-400"></i>
                     <input type="text" placeholder="Suchen" class="bg-transparent ml-2 placeholder-gray-400 inline-block flex-auto w-full">
                 </div>
             </div>
@@ -30,19 +30,19 @@
                 <ul class="flex flex-col">
                     <li class="mt-2">
                         <a href="" class=" p-2 bg-brand-red rounded-lg flex items-center">
-                            <i class="fad fa-exclamation-triangle fa-fw fa-lg text-white"></i>
+                            <i class="fas fa-exclamation-triangle fa-fw fa-lg text-white"></i>
                             <span class="text-white font-medium ml-4">Einsätze</span>
                         </a>
                     </li>
                     <li class="mt-2">
                         <a href="" class="p-2 flex items-center rounded-lg hover:bg-gray-700">
-                            <i class="fad fa-sitemap fa-fw fa-lg text-gray-500"></i>
+                            <i class="fas fa-sitemap fa-fw fa-lg text-gray-500"></i>
                             <span class="text-gray-400 font-medium ml-4">Organisation</span>
                         </a>
                     </li>
                     <li class="mt-2">
                         <a href="" class="text-gray-800 p-2 rounded-lg flex items-center hover:bg-gray-700">
-                            <i class="fad fa-cog fa-fw fa-lg text-gray-500"></i>
+                            <i class="fas fa-cog fa-fw fa-lg text-gray-500"></i>
                             <span class="text-gray-400 font-medium ml-4">Einstellungen</span>
                         </a>
                     </li>
@@ -51,7 +51,7 @@
             <hr class="border-gray-800">
             <nav class="p-4">
                 <div class="flex items-center p-2">
-                    <i class="fad fa-user-alt fa-lg fa-fw text-gray-500"></i>
+                    <i class="fas fa-user-alt fa-lg fa-fw text-gray-500"></i>
                     <div class="ml-4">
                         <div class="font-medium">
                             FF Gaflenz
@@ -62,7 +62,7 @@
                     </div>
                 </div>
                 <a href="" class="text-gray-800 p-2 rounded-lg flex items-center hover:bg-gray-700">
-                    <i class="fad fa-sign-out fa-fw fa-lg text-gray-500"></i>
+                    <i class="fas fa-sign-out-alt fa-fw fa-lg text-gray-500"></i>
                     <span class="text-gray-400 font-medium ml-4">Abmelden</span>
                 </a>
             </nav>

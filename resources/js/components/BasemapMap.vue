@@ -1,6 +1,7 @@
 <template>
     <div class="flex flex-col">
         <div ref="map" class="basemap-map bg-gray-600 flex-auto"></div>
+        <slot :map="map"/>
     </div>
 </template>
 
@@ -29,7 +30,7 @@ import StrokeStyle from 'ol/style/Stroke'
 import {defaults as defaultInteractions, Select, Translate} from 'ol/interaction';
 import GeoJSON from 'ol/format/GeoJSON'
 import isEmpty from 'lodash/isEmpty'
-import {defaults as defaultControls, Attribution} from 'ol/control'
+import {defaults as defaultControls, Attribution, OverviewMap } from 'ol/control'
 
 proj4.defs(
     "EPSG:31258",
@@ -115,6 +116,9 @@ export default {
             type: Array,
             default: () => [],
         },
+        fit: {
+            type: Array,
+        }
     },
 
     data() {
@@ -234,6 +238,12 @@ export default {
 
         for (const layer of this.layers) {
             this.map.addLayer(layer)
+        }
+
+        if (this.fit) {
+            this.map.getView().fit(this.fit, {
+                padding: [32, 32, 32, 32],
+            })
         }
     }
 }

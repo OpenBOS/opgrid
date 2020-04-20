@@ -6,7 +6,7 @@
             </h1>
 
             <a href="" class="bg-blue-600 px-3 py-1 rounded-lg text-sm">
-                <i class="fal fa-plus"></i>
+                <i class="fas fa-plus"></i>
                 Neuer Einsatz
             </a>
         </header>
@@ -24,7 +24,14 @@
                 </div>
             </div>
             <div class="flex flex-col">
-                <basemap-map :center="[553674.27, 307199.11]" :layers="[operationsLayer]" class="flex-auto"></basemap-map>
+                <basemap-map
+                    v-if="operationsLayer"
+                    :center="[553674.27, 307199.11]"
+                    :layers="[operationsLayer]"
+                    :fit="operationsLayer.getSource().getExtent()"
+                    class="flex-auto"
+                >
+                </basemap-map>
             </div>
         </div>
     </div>
