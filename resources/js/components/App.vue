@@ -13,7 +13,7 @@
         <header class="fixed w-56 border-r border-gray-800 bg-gray-900 top-0 bottom-0 flex flex-col">
             <div class="flex items-center h-12 bg-brand-red">
                 <h1 class="py-2 px-4 font-bold text-white uppercase">
-                    Codename: OpGrid
+                    Visor
                 </h1>
             </div>
 

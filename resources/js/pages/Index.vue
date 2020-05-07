@@ -20,7 +20,41 @@
                 </div>
                 <hr class="border-gray-700">
                 <div class="p-4 px-8">
-                    Einsätze und Status
+                    <div class="divide-y divide-gray-800 rounded overflow-hidden">
+                        <article
+                            v-for="(operation, i) in operations"
+                            :key="i"
+                            class="grid grid-cols-12 relative bg-gray-700 hover:bg-gray-600 p-2"
+                        >
+                            <div class="flex items-center text-sm text-gray-500 p-2 col-span-1">
+                                {{ i + 1 }}
+                            </div>
+                            <div class="space-y-1 col-span-5">
+                                <div
+                                    class="font-bold"
+                                >
+                                    <router-link to="/operations/demo">
+                                        {{ operation.title }}
+                                    </router-link>
+                                </div>
+                                <div class="text-sm text-gray-500">
+                                    Technischer Einsatz
+                                </div>
+                            </div>
+                            <div class="space-y-1 col-span-5">
+                                <div>
+                                    <span class="bg-orange-500 py-1 px-2 rounded-full text-sm font-medium">{{ operation.status }}</span>
+                                </div>
+                                <div class="text-sm text-gray-500">
+                                    Im Einsatz seit 5 Stunden
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-end p-2 col-span-1">
+                                <i class="fas fa-caret-right"></i>
+                            </div>
+                            <router-link to="/operations/demo" class="absolute inset-0"></router-link>
+                        </article>
+                    </div>
                 </div>
             </div>
             <div class="flex flex-col">
@@ -52,6 +86,16 @@ export default {
     data() {
         return {
             operationsLayer: null,
+            operations: [
+                {
+                    title: 'Ölspur',
+                    status: 'Laufend'
+                },
+                {
+                    title: 'Verkehrsunfall',
+                    status: 'Laufend'
+                },
+            ]
         }
     },
     mounted() {
