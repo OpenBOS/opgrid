@@ -10,7 +10,13 @@ const routes = [
     },
     {
         path: '/operations/demo',
-        component: () => import('./pages/Operation/Show')
+        component: () => import('./pages/Operation/Show'),
+        children: [
+            {
+                path: '',
+                component: () => import('./pages/Operation/Module/Grid')
+            },
+        ]
     },
 ]
 
