@@ -2,7 +2,9 @@
 /public/hot
 /public/storage
 /public/js
+!/public/js/.gitignore
 /public/css
+!/public/css/.gitignore
 /storage/*.key
 /vendor
 .env
