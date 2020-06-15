@@ -2,6 +2,8 @@
 /public/hot
 /public/storage
 /public/js
+/public/fonts
+/public/*.js
 !/public/js/.gitignore
 /public/css
 !/public/css/.gitignore

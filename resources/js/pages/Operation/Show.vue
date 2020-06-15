@@ -54,6 +54,7 @@ export default {
             showMap: true,
         }
     },
+
     computed: {
         nav() {
             return [

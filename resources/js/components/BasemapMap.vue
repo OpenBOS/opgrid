@@ -7,9 +7,13 @@
 
 <script>
 import "ol/ol.css";
+// import olms from 'ol-mapbox-style'
 import Map from "ol/Map";
 import View from "ol/View";
 import VectorLayer from "ol/layer/Vector";
+import VectorTileLayer from 'ol/layer/VectorTile'
+import VectorTileSource from 'ol/source/VectorTile'
+import MVT from 'ol/format/MVT'
 import TileLayer from "ol/layer/Tile";
 import TileWMS from "ol/source/TileWMS";
 import { toLonLat, fromLonLat } from "ol/proj";
@@ -217,6 +221,7 @@ export default {
             target: this.$refs.map,
             view: new View({
                 projection: "EPSG:31258",
+                // projection: "EPSG:3857",
                 center: this.center,
                 zoom: 15,
                 maxZoom: 20,
@@ -235,6 +240,17 @@ export default {
         this.addBasemapLayer(hiDPI ? "bmaphidpi" : "geolandbasemap", 0)
         // this.addBasemapLayer("bmaporthofoto30cm", 0)
         // this.addBasemapLayer("bmapoverlay", 1)
+
+        // const vectorTileLayer = new VectorTileLayer({
+        //     declutter: true,
+        //     source: new VectorTileSource({
+        //         attributions: 'adf',
+        //         format: new MVT(),
+        //         url: 'https://maps.wien.gv.at/basemapv/bmapv/3857/resources/styles/root.json'
+        //     })
+        // })
+
+        // await olms(this.map, 'https://maps.wien.gv.at/basemapv/bmapv/3857/resources/styles/root.json')
 
         for (const layer of this.layers) {
             this.map.addLayer(layer)
